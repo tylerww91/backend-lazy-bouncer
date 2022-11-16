@@ -79,7 +79,7 @@ describe('lazy-bouncer routes', () => {
     });
   });
 
-  it.skip('should return a list of users if signed in as admin', async () => {
+  it('should return a list of users if signed in as admin', async () => {
     const [agent, user] = await registerAndLogin({ email: 'admin' });
     const res = await agent.get('/api/v1/users');
 
