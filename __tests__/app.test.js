@@ -69,7 +69,7 @@ describe('lazy-bouncer routes', () => {
     });
   });
 
-  it.skip('should return a 403 when signed in but not admin and listing all users', async () => {
+  it('should return a 403 when signed in but not admin and listing all users', async () => {
     const [agent] = await registerAndLogin();
     const res = await agent.get('/api/v1/users');
 
